@@ -1,0 +1,7 @@
+{
+	"name": "Home Easy HVAC",
+	"render_readme": true,
+	"domains": [
+		"climate"
+	]
+}
