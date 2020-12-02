@@ -11,8 +11,21 @@
         "step": {
             "user": {
                 "data": {
-                    "mac": "Mac"
-                }
+                    "mac": "Mac address"
+                },
+                "description": "Specify the mac address of your HVAC. It is the default name of your device in the app, like '01ab23cd45ef'.",
+                "title": "Home Easy HVAC integration"
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "should_pull": "Enable periodical updates(HA restart is required)"
+                },
+                "description": "HVAC unit updates integration when it changes some operation options.\nThe only thing that may be changed without notification is the current temperature. To see the proper temperature HA needs to update the device state periodically.",
+                "title": "Configure Home Easy HVAC integration"
             }
         }
     },

@@ -51,9 +51,10 @@ SWING_MODES = {
 
 async def async_setup_entry(hass, config, async_add_entities):
     """Initialize a Spider thermostat."""
-    api = hass.data[DOMAIN][config.entry_id]
+    mac: str = hass.data[DOMAIN][config.entry_id]
+    pull: bool = config.options.get("should_pull")
 
-    entities = [HomeEasyThermostat(api)]
+    entities = [HomeEasyThermostat(mac, pull)]
 
     async_add_entities(entities)
 
@@ -65,8 +66,9 @@ class HomeEasyThermostat(ClimateEntity):
     _lib: HomeEasyLib
     _state: DeviceState
 
-    def __init__(self, mac):
+    def __init__(self, mac: str, pool: bool):
         """Initialize the thermostat."""
+        self._pool = pool
         self._mac = mac
         self._lib = HomeEasyLib()
         self._lib.connect()
@@ -84,7 +86,7 @@ class HomeEasyThermostat(ClimateEntity):
 
         False if entity pushes its state to HA.
         """
-        return False
+        return self._pool
 
     @property
     def supported_features(self) -> int:
