@@ -188,7 +188,7 @@ class HomeEasyThermostat(ClimateEntity):
             h, v = value
             if h == self._state.flowHorizontalMode and v == self._state.flowVerticalMode:
                 return key
-        return SWING_MODES.keys()[-1]
+        return list(SWING_MODES.keys())[-1]
 
     @property
     def swing_modes(self) -> List[str]:
