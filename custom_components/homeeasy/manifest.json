@@ -2,6 +2,7 @@
   "domain": "homeeasy",
   "name": "Home Easy HVAC",
   "config_flow": true,
+  "version": "1.0.0"
   "documentation": "https://github.com/ki0ki0/homeeasy_ha",
   "requirements": [
     "homeeasy==0.0.3"
