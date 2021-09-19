@@ -1,4 +1,10 @@
-# homeeasy_ha
+# homeeasy_ha: also look at [homeeasy_ha_local](https://github.com/ki0ki0/homeeasy_ha_local)
+
+## Update:
+New integration with better stability, higher security, and additional abilities is available [here](https://github.com/ki0ki0/homeeasy_ha_local).
+
+##
+
 [Hass.io](https://home-assistant.io/) integration for HVAC units compatible with Home Easy application
 
 Uses [homeeasylib](https://github.com/ki0ki0/homeeasylib) project
